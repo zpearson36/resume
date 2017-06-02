@@ -21,4 +21,9 @@ Work.create(company: "Example company", name: "Example3",
         start: Date.parse("5/5/1999"), end: Date.parse("6/6/1999"),
         description: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium a erat in consectetur. Curabitur imperdiet vehicula dictum. Sed tincidunt tortor a dolor aliquam, scelerisque feugiat elit varius. Duis lobortis, massa vitae hendrerit convallis, tellus arcu dapibus lorem, nec lobortis risus urna sit amet massa. Nulla libero libero, aliquam eget nunc ut, dignissim hendrerit purus. Nullam nec massa ante. Pellentesque mattis arcu et magna viverra, sit amet dignissim nulla vestibulum. Cras rhoncus lorem eget convallis fermentum. Maecenas in lacus ligula. In eget suscipit tellus. Sed eu libero suscipit, eleifend libero non, varius nibh. Phasellus sit amet tortor molestie, maximus mauris quis, porttitor elit. Suspendisse bibendum, orci ut vulputate pharetra, ante urna fringilla risus, ut fermentum nisi turpis at nulla. Maecenas tincidunt malesuada nunc sed blandit. Nam mattis elementum lacinia. Mauris vel leo non diam imperdiet rutrum.
 Proin condimentum mi ultrices eros pretium ultricies. Praesent ac purus ultricies, condimentum turpis in, vehicula arcu. Mauris sagittis sapien et dictum ornare. Morbi ut efficitur leo. Nunc nec dui in diam aliquam dignissim eget vitae enim. Ut imperdiet euismod tellus, eget porta turpis ultrices id. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum eget nunc venenatis, hendrerit neque quis, euismod lorem. Duis dictum posuere diam. Proin lacinia tincidunt sollicitudin. Sed et rhoncus nibh. Ut semper est a viverra luctus. Suspendisse et finibus sem, a fermentum elit. Etiam ultricies erat sed massa porta sodales. Suspendisse enim augue, feugiat eu luctus at, ornare id lectus. Ut lacinia a nibh ut efficitur. ")
-p "Created 3 movies"
+
+Education.create(school: "Wichita State University", degree: "Bachelors of Science",
+                 major: "Computer Science", minor: "Mathematics",
+                 start: Date.parse("8/1/2009"), end: Date.parse("5/31/2016"))
+
+p "Created seeds"
