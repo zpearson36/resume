@@ -10,5 +10,6 @@ class PagesController < ApplicationController
   end
 
   def education
+    @education = Education.all
   end
 end

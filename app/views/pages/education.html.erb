@@ -1,0 +1,10 @@
+<% @education.each do |edu| %>
+  <div class="container workhistory">
+    <h1><%= edu.school %></h1>
+    <h2><%= edu.degree =%> in <%= edu.major %></h2>
+    <% if edu.minor != "N/A" %>
+      <h2><%= edu.minor %> minor</h2>
+    <% end %>
+    <h3><%= edu.start.strftime("%B") %> <%= edu.start.year %> - <%= edu.end.strftime("%B") %> <%= edu.end.year %></h3>
+  </div>
+<% end %>

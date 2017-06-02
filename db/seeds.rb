@@ -24,6 +24,7 @@ Proin condimentum mi ultrices eros pretium ultricies. Praesent ac purus ultricie
 
 Education.create(school: "Wichita State University", degree: "Bachelors of Science",
                  major: "Computer Science", minor: "Mathematics",
-                 start: Date.parse("8/1/2009"), end: Date.parse("5/31/2016"))
+                 start: Date.parse("1/8/2009"),
+               end: Date.parse("31/5/2016"))
 
 p "Created seeds"
