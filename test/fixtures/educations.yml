@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  school: MyString
+  degree: MyString
+  major: MyString
+  minor: MyString
+  start: 2017-06-01
+  end: 2017-06-01
+
+two:
+  school: MyString
+  degree: MyString
+  major: MyString
+  minor: MyString
+  start: 2017-06-01
+  end: 2017-06-01
