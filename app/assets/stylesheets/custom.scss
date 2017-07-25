@@ -1,73 +1,80 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-body, html{
-  height:100%;
+
+body,
+html {
+  height: 100%;
   margin: 0;
 }
 
-.img{
-  &-top{
+.img {
+  &-top {
     background: image-url("img1.jpeg");
-    min-height:100%;
+    min-height: 100%;
+  }
 
-  }
-  &-mid{
+  &-mid {
     background: image-url("img2.jpg");
-    min-height:400px;
+    min-height: 400px;
   }
-  &-bot{
+
+  &-bot {
     background: image-url("img3.jpeg");
-    min-height:400px;
+    min-height: 400px;
   }
-  &-top, &-mid, &-bot{
+
+  &-bot,
+  &-mid,
+  &-top {
     position: relative;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    }
+  }
 }
 
-.subtitle{
-  position:absolute;
-  top:50%;
-  width:100%;
-  text-align:center;
-  color:#222;
-  font-size:27px;
-  letter-spacing:8px;
-  text-transform:uppercase;
+.subtitle {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #222;
+  font-size: 27px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
 }
 
-.main{
-  h2{
-    margin-top: 0px;
+.main {
+  h2 {
+    margin-top: 0;
     margin-bottom: 25px;
   }
+  text-align: center;
+  padding: 25px 125px;
+  opacity: 0.7;
 
-  text-align:center;
-  padding:25px 125px;
-  opacity: .7;
-  &-dark{
+  &-dark {
     background-color: #666;
     color: #f4f4f4;
   }
-  &-light{
+
+  &-light {
     background-color: #f4f4f4;
     color: #666;
   }
 }
 
-.subtext{
+.subtext {
   //width:75%;
   margin-left: auto;
   margin-right: auto;
   text-align: justify;
   -moz-text-align-last: center;
-    text-align-last: center;
+  text-align-last: center;
 }
 
-.workhistory{
+.workhistory {
   border-width: 10px;
   border-style: solid;
   border-radius: 30px;
@@ -117,21 +124,23 @@ footer ul li {
   margin-left: 15px;
 }
 
-.navbar{
-  &-static{
+.navbar {
+  &-static {
     &-bottom {
-    @extend .navbar-fixed-bottom;
-    position: relative;
-    border-width: 1px 1px 0;
+      @extend .navbar-fixed-bottom;
+      position: relative;
+      border-width: 1px 1px 0;
     }
   }
-  &-center{
+
+  &-center {
     ul {
       list-style: none;
       position: relative;
       float: left;
       display: block;
       left: 50%;
+
       li {
         position: relative;
         float: left;
@@ -140,4 +149,7 @@ footer ul li {
       }
     }
   }
+}
+@media(max-width:768px) {
+  //.menu-top{display:none;}
 }
