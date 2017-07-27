@@ -74,6 +74,12 @@ html {
   text-align-last: center;
 }
 
+.workimage{
+  height:inherit;
+  display: flex;
+  align-items: center;
+}
+
 .workhistory {
   border-width: 10px;
   border-style: solid;

@@ -1,5 +1,7 @@
 class PagesController < ApplicationController
   def home
+    @history = Work.all
+    @education = Education.all
   end
 
   def bio
