@@ -25,18 +25,22 @@
 </div>
 <div class="main main-light">
   <% @history.each_with_index do |work, index| %>
-    <a href="bio#<%= work.name %>">
-      <div class="row employment">
-        <div class="workimage col-sm-4" style="float:<%= index%2 == 0 ? 'left' : 'right' %>">
-          <img src="/assets/img1.jpeg" class="img-circle" alt="Cinque Terre" width="150px" height="150px">
-        </div>
-        <div class="col-sm-8 company" style="float: <%= index%2 == 0 ? 'right' : 'left' %>">
-          <h2 style="text-align:<%= index%2 == 0 ? 'left' : 'right' %>"><%= work.company %></h2>
-          <h4 style="text-align:<%= index%2 == 0 ? 'left' : 'right' %>"><%= work.start.strftime("%B") %> <%= work.start.year %> - <%= work.end.strftime("%B") %> <%= work.end.year %></h4>
-          <p class="subtext subtext-<%= index%2 == 0 ? 'left' : 'right' %>"><%= work.short_descr %></p>
-        </div>
+  <a href="bio#<%= work.name %>">
+    <div class="row employment">
+      <div class="workimage col-sm-4" style="float:<%= index%2 == 0 ? 'left' : 'right' %>">
+        <img src="/assets/img1.jpeg" class="img-circle" alt="Cinque Terre" width="150px" height="150px">
       </div>
-    </a>
+      <div class="col-sm-8 company" style="float: <%= index%2 == 0 ? 'right' : 'left' %>">
+        <h2 style="text-align:<%= index%2 == 0 ? 'left' : 'right' %>"><%= work.company %></h2>
+        <h4 style="text-align:<%= index%2 == 0 ? 'left' : 'right' %>"><%= work.start.strftime("%B") %>
+          <%= work.start.year %>
+          -
+          <%= work.end.strftime("%B") %>
+          <%= work.end.year %></h4>
+        <p class="subtext subtext-<%= index%2 == 0 ? 'left' : 'right' %>"><%= work.short_descr %></p>
+      </div>
+    </div>
+  </a>
   <% end %>
 </div>
 
@@ -48,12 +52,26 @@
   </div>
 </div>
 <div class="main main-dark">
-  <h2>Education</h2>
-  <p class="subtext">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id architecto minus dolor repudiandae ipsa atque odit, tempora doloremque esse unde! Veniam illum sit vero totam, tenetur repellendus harum consectetur iste eius obcaecati fugit ipsa, rerum
-    deleniti enim maiores sint dolor perspiciatis vitae. Molestiae consequuntur magnam rerum placeat quasi natus tempore atque, quaerat laudantium ipsam illo, dolore magni dolorem doloremque aperiam consequatur voluptas, odio, quae corporis quis nihil.
-    Mollitia minima quos nulla deleniti veniam numquam nam architecto laudantium accusantium, pariatur, doloremque totam! Laboriosam consequatur nesciunt ex, sit facilis, aliquam vero distinctio adipisci esse soluta ullam rerum. Recusandae et temporibus
-    dolorum aliquam laudantium eligendi aliquid quasi ipsa, illum eaque, vitae fugit. Id expedita eos quos tenetur debitis itaque similique reprehenderit harum omnis adipisci maxime ex exercitationem saepe fuga nostrum, veniam magni illum excepturi,
-    nesciunt sapiente. Temporibus quibusdam iure iusto veniam, laboriosam magnam perspiciatis aspernatur similique labore nemo natus dignissimos placeat eveniet nihil.
-  </p>
+  <% @education.each_with_index do |edu, index| %>
+  <div class="row">
+    <div class="workimage col-sm-4" style="float:<%= index%2 == 0 ? 'left' : 'right' %>">
+      <img src="/assets/img1.jpeg" class="img-circle" alt="Cinque Terre" width="150px" height="150px">
+    </div>
+    <div class="col-sm-8 education">
+      <h2 style="text-align:<%= index%2 == 0 ? 'left' : 'right' %>"><%= edu.school %></h2>
+      <h4 style="text-align:<%= index%2 == 0 ? 'left' : 'right' %>"><%= edu.degree =%>
+        in
+        <%= edu.major %></h4>
+      <% if edu.minor != "N/A" %>
+      <h4 style="text-align:<%= index%2 == 0 ? 'left' : 'right' %>"><%= edu.minor %>
+        minor</h4>
+      <% end %>
+      <h4 style="text-align:<%= index%2 == 0 ? 'left' : 'right' %>"><%= edu.start.strftime("%B") %>
+        <%= edu.start.year %>
+        -
+        <%= edu.end.strftime("%B") %>
+        <%= edu.end.year %></h4>
+    </div>
+  </div>
+  <% end %>
 </div>
