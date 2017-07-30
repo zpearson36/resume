@@ -1,5 +1,5 @@
 <% @history.each do |work| %>
-  <div class="container workhistory">
+  <div class="container workhistory" id="<%= work.name %>">
     <h1><%= work.company %></h1>
     <h2><%= work.start.strftime("%B") %> <%= work.start.year %> - <%= work.end.strftime("%B") %> <%= work.end.year %></h2>
     <%= simple_format(work.description) %>
